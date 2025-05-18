@@ -77,3 +77,55 @@ body {
 .whatsapp {
   background: #25D366;
 }
+
+1);
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.flower-card:hover {
+  transform: translateY(-5px);
+}
+
+.flower-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px 16px 0 0;
+  display: block;
+}
+
+.dots {
+  display: block;
+  font-size: 24px;
+  color: #402929;
+  text-decoration: none;
+  margin: 10px 0 20px;
+}
+
+.contact-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.telegram {
+  background-color: #229ED9;
+}
+
+.viber {
+  background-color: #7360F2;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
