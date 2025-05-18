@@ -1,30 +1,71 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fefaf7;
+    background-image: url('flower-silhouettes.png');
+    background-repeat: repeat;
+    background-size: contain;
+    color: #3e2b2e;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1em 0;
+    color: #472c35;
+}
+
 .catalog {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #fef9f6;
-  font-family: 'DM Serif Display', serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #4b2e39;
-  margin-bottom: 40px;
+.flower-card {
+    width: 150px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1em;
 }
 
-.flower-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.flower-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.flower-icon {
-  width: 80px;
-  height: auto;
-  border-radius: 50%;
-  transition: transform 0.3s;
+.name {
+    font-weight: bold;
+    margin: 0.5em 0 0;
 }
 
-.flower-icon:hover {
-  transform: scale(1.1);
+.dots {
+    color: #999;
+    font-size: 1.5em;
 }
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em;
+}
+
+.btn {
+    padding: 0.7em 1.5em;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+}
+
+.telegram { background-color: #229ED9; }
+.viber { background-color: #7360F2; }
+.whatsapp { background-color: #25D366; }
