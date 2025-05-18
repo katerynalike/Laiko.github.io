@@ -1,79 +1,85 @@
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: url('flower-silhouettes.PNG') repeat;
-  background-color: #fff8f4;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    font-family: 'DM Serif Display', serif;
+    background-color: #fff8f4;
+    margin: 0;
+    padding: 0;
+    color: #2b2b2b;
 }
 
-.catalog-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: 36px;
-  margin: 20px 0;
-  color: #4c2c2c;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
-  gap: 20px;
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 160px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.flower-card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 160px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card:hover {
+    transform: scale(1.03);
 }
 
-.flower-card img {
-  width: 100%;
-  border-radius: 12px;
+.card img {
+    max-width: 100%;
+    border-radius: 12px;
 }
 
-.flower-card h3 {
-  margin: 8px 0 4px;
-  font-size: 18px;
-  color: #4c2c2c;
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
 }
 
-.dots {
-  font-size: 24px;
-  color: #4c2c2c;
-  text-decoration: none;
+.card p {
+    font-size: 14px;
+    margin: 5px 0;
 }
 
-.contacts {
-  margin: 40px 0 20px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+.card .more {
+    font-size: 24px;
+    color: #999;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.contact-section {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 40px;
 }
 
 .contact-button {
-  padding: 10px 18px;
-  border-radius: 30px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 8px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.telegram {
-  background: #229ED9;
+.contact-button.telegram {
+    background-color: #0088cc;
 }
 
-.viber {
-  background: #7360F2;
+.contact-button.viber {
+    background-color: #7360f2;
 }
 
-.whatsapp {
-  background: #25D366;
+.contact-button.whatsapp {
+    background-color: #25d366;
+}
+
+.contact-button:hover {
+    opacity: 0.85;
 }
