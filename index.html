@@ -2,34 +2,48 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Каталог квітів</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Каталог квітів</h1>
-    <div class="flower-list">
-        <a href="flowers/cool-water.html" class="flower-item">
+    <main class="catalog">
+        <h1>Каталог квітів</h1>
+
+        <div class="flower-card">
             <img src="cool-water.png" alt="Cool Water">
-            <div class="flower-name">Cool Water</div>
-        </a>
-        <a href="flowers/cabaret.html" class="flower-item">
+            <h2>Cool Water</h2>
+            <p>Ніжна троянда у витонченому лавандовому відтінку з класичною формою. Дізнайтесь більше...</p>
+            <a href="cool-water.html">Детальніше</a>
+        </div>
+
+        <div class="flower-card">
             <img src="cabaret.png" alt="Cabaret">
-            <div class="flower-name">Cabaret</div>
-        </a>
-        <a href="flowers/paloma.html" class="flower-item">
+            <h2>Cabaret</h2>
+            <p>Витончена кремова троянда з яскраво-рожевими краями. Дізнайтесь більше...</p>
+            <a href="cabaret.html">Детальніше</a>
+        </div>
+
+        <div class="flower-card">
             <img src="paloma.png" alt="Paloma">
-            <div class="flower-name">Paloma</div>
-        </a>
-        <a href="flowers/pandora.html" class="flower-item">
+            <h2>Paloma</h2>
+            <p>Ніжно-рожева троянда з теплим м’яким відтінком. Дізнайтесь більше...</p>
+            <a href="paloma.html">Детальніше</a>
+        </div>
+
+        <div class="flower-card">
             <img src="pandora.png" alt="Pandora">
-            <div class="flower-name">Pandora</div>
-        </a>
-    </div>
-    <div class="contacts">
-        <a href="https://t.me/+380674656284" class="btn telegram">Telegram</a>
-        <a href="viber://chat?number=%2B380674656284" class="btn viber">Viber</a>
-        <a href="https://wa.me/380674656284" class="btn whatsapp">WhatsApp</a>
-    </div>
+            <h2>Pandora</h2>
+            <p>Рожева троянда з фіолетовим відтінком і спіральними пелюстками. Дізнайтесь більше...</p>
+            <a href="pandora.html">Детальніше</a>
+        </div>
+    </main>
+
+    <footer class="contact-buttons">
+        <a class="btn telegram" href="https://t.me/+380674656284" target="_blank">Telegram</a>
+        <a class="btn viber" href="viber://chat?number=+380674656284" target="_blank">Viber</a>
+        <a class="btn whatsapp" href="https://wa.me/380674656284" target="_blank">WhatsApp</a>
+    </footer>
 </body>
 </html>
