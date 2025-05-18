@@ -1,49 +1,75 @@
-
 body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #fdf9f6;
-  background-image: url('flower-silhouettes.PNG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #2d2b2b;
+    font-family: 'Arial', sans-serif;
+    background-color: #fef9f5;
+    margin: 0;
+    padding: 0;
 }
 
-.details-page header h1 {
-  text-align: center;
-  font-size: 2em;
-  color: #3d2230;
-  margin-top: 20px;
+header {
+    text-align: center;
+    padding: 20px;
 }
 
-.flower-details {
-  max-width: 700px;
-  margin: 20px auto;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+h1 {
+    font-size: 32px;
+    color: #452b2b;
 }
 
-.detail-image {
-  width: 100%;
-  max-width: 400px;
-  display: block;
-  margin: 0 auto 20px auto;
-  border-radius: 12px;
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
 }
 
-.description {
-  font-size: 1.1em;
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 20px;
+.flower-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 240px;
+    text-align: center;
+    padding-bottom: 16px;
 }
 
-.flower-info {
-  list-style-type: disc;
-  padding-left: 40px;
-  font-size: 1em;
-  line-height: 1.5;
+.flower-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.more-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 20px;
+    color: #444;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.telegram {
+    background-color: #0088cc;
+}
+
+.viber {
+    background-color: #7354a2;
+}
+
+.whatsapp {
+    background-color: #25d366;
 }
