@@ -1,71 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fefaf7;
-    background-image: url('flower-silhouettes.png');
-    background-repeat: repeat;
-    background-size: contain;
-    color: #3e2b2e;
-}
-
-.title {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 1em 0;
-    color: #472c35;
+    padding: 0;
+    font-family: 'DM Serif Display', serif;
+    background-color: #fdf8f3;
+    color: #2d1e2f;
 }
 
 .catalog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-    padding: 1em;
-}
-
-.flower-card {
-    width: 150px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
     text-align: center;
-    padding: 1em;
 }
 
-.flower-card img {
-    width: 100%;
-    height: auto;
+h1 {
+    font-size: 48px;
+    margin-bottom: 60px;
+    color: #2d1e2f;
+}
+
+.flower-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.flower-entry {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.flower-entry:hover {
+    transform: translateY(-5px);
+}
+
+.flower-entry img {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 50%;
+    border: 4px solid #f3e6e0;
 }
 
-.name {
-    font-weight: bold;
-    margin: 0.5em 0 0;
+.flower-info {
+    text-align: left;
 }
 
-.dots {
-    color: #999;
-    font-size: 1.5em;
+.flower-info h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    color: #2d1e2f;
+}
+
+.flower-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #5f4b5b;
 }
 
 .contact-buttons {
+    margin-top: 60px;
     display: flex;
     justify-content: center;
-    gap: 1em;
-    padding: 2em;
+    gap: 20px;
 }
 
-.btn {
-    padding: 0.7em 1.5em;
-    border: none;
-    border-radius: 25px;
+.contact-buttons a {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
     text-decoration: none;
-    font-weight: bold;
     color: white;
-    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
-.telegram { background-color: #229ED9; }
-.viber { background-color: #7360F2; }
-.whatsapp { background-color: #25D366; }
+.contact-buttons .telegram { background-color: #229ED9; }
+.contact-buttons .viber { background-color: #665CAC; }
+.contact-buttons .whatsapp { background-color: #25D366; }
+
+.contact-buttons a:hover {
+    opacity: 0.9;
+}
