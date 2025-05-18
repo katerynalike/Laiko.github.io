@@ -1,69 +1,49 @@
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: url('flower-silhouettes.PNG') repeat;
-  background-color: #fff8f4;
   margin: 0;
-  padding: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fdf9f6;
+  background-image: url('flower-silhouettes.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #2d2b2b;
+}
+
+.details-page header h1 {
   text-align: center;
+  font-size: 2em;
+  color: #3d2230;
+  margin-top: 20px;
 }
 
-.catalog-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: 36px;
-  margin: 20px 0;
-  color: #4c2c2c;
+.flower-details {
+  max-width: 700px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
-  gap: 24px;
-}
-
-.flower-card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 180px;
-  height: 240px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flower-card img {
+.detail-image {
   width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 20px auto;
   border-radius: 12px;
-  object-fit: cover;
-  height: 180px;
 }
 
-.more-link {
-  font-size: 24px;
-  color: #4c2c2c;
-  text-decoration: none;
+.description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.contacts {
-  margin: 40px 0 20px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+.flower-info {
+  list-style-type: disc;
+  padding-left: 40px;
+  font-size: 1em;
+  line-height: 1.5;
 }
-
-.contact-button {
-  padding: 10px 18px;
-  border-radius: 30px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.telegram { background-color: #229ED9; }
-.viber { background-color: #7360F2; }
-.whatsapp { background-color: #25D366; }
