@@ -1,49 +1,79 @@
+
 body {
   font-family: 'Arial', sans-serif;
+  background: url('flower-silhouettes.PNG') repeat;
+  background-color: #fff8f4;
   margin: 0;
-  background-color: #fffaf7;
-  color: #333;
+  padding: 0;
   text-align: center;
 }
-h1 {
+
+.catalog-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 28px;
-  margin: 30px 0;
+  font-size: 36px;
+  margin: 20px 0;
+  color: #4c2c2c;
 }
+
 .catalog {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 0 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
 }
-.card {
+
+.flower-card {
   background: white;
-  border-radius: 18px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 20px;
-  transition: transform 0.3s ease;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 160px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.card img {
+
+.flower-card img {
   width: 100%;
-  height: auto;
-  border-radius: 14px;
+  border-radius: 12px;
 }
+
+.flower-card h3 {
+  margin: 8px 0 4px;
+  font-size: 18px;
+  color: #4c2c2c;
+}
+
 .dots {
   font-size: 24px;
-  margin-top: 10px;
-  color: #888;
-}
-footer {
-  padding: 30px 0;
-}
-.contact-btn {
-  margin: 0 10px;
-  padding: 12px 20px;
-  border-radius: 25px;
+  color: #4c2c2c;
   text-decoration: none;
+}
+
+.contacts {
+  margin: 40px 0 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.contact-button {
+  padding: 10px 18px;
+  border-radius: 30px;
   color: white;
   font-weight: bold;
+  text-decoration: none;
 }
-.telegram { background: #229ED9; }
-.viber { background: #7360F2; }
-.whatsapp { background: #25D366; }
+
+.telegram {
+  background: #229ED9;
+}
+
+.viber {
+  background: #7360F2;
+}
+
+.whatsapp {
+  background: #25D366;
+}
