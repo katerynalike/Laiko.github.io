@@ -1,75 +1,50 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fef9f5;
+body.flower-page {
     margin: 0;
-    padding: 0;
-}
-
-header {
+    font-family: 'Georgia', serif;
+    background-color: #fdf7f2;
+    background-image: url('images/flower-silhouettes.PNG');
+    background-size: cover;
+    background-position: center;
+    color: #2e1d1a;
     text-align: center;
     padding: 20px;
 }
 
-h1 {
-    font-size: 32px;
-    color: #452b2b;
-}
-
-.catalog {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 20px;
+.flower-container {
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
-    justify-items: center;
 }
 
-.flower-card {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    overflow: hidden;
-    width: 240px;
-    text-align: center;
-    padding-bottom: 16px;
-}
-
-.flower-card img {
+.flower-image {
     width: 100%;
+    max-width: 320px;
     height: auto;
-    display: block;
+    margin-bottom: 20px;
 }
 
-.more-link {
-    display: inline-block;
-    margin-top: 8px;
-    font-size: 20px;
-    color: #444;
-    text-decoration: none;
+.flower-title {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+.flower-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.details-box {
+    background-color: rgba(249, 241, 234, 0.7);
+    border-radius: 10px;
     padding: 20px;
+    display: inline-block;
+    text-align: left;
 }
 
-.contact-button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.telegram {
-    background-color: #0088cc;
-}
-
-.viber {
-    background-color: #7354a2;
-}
-
-.whatsapp {
-    background-color: #25d366;
+.flower-details {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 17px;
 }
