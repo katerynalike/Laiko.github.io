@@ -1,64 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Каталог квітів</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог квітів</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 class="title">Каталог квітів</h1>
-  <div class="grid">
-    <div class="card">
-      <div class="card-image" style="background-image: url('cool-water.jpg');"></div>
-      <div class="card-title">Cool Water</div>
-      <div class="card-info">
-        <div>🌹 5–6 см</div>
-        <div>⏱ 10–12 днів</div>
-        <div>🌿 40–70 см</div>
-        <div>🌸 37 пелюсток</div>
-      </div>
-      <a href="#contacts" class="card-more">...</a>
+    <h1 class="title">Каталог квітів</h1>
+    <div class="gallery">
+        <div class="card">
+            <img src="img/cool-water.jpg" alt="Cool Water" />
+            <a href="#contacts" class="dots">...</a>
+        </div>
+        <div class="card">
+            <img src="img/cabaret.jpg" alt="Cabaret" />
+            <a href="#contacts" class="dots">...</a>
+        </div>
+        <div class="card">
+            <img src="img/paloma.jpg" alt="Paloma" />
+            <a href="#contacts" class="dots">...</a>
+        </div>
+        <div class="card">
+            <img src="img/pandora.jpg" alt="Pandora" />
+            <a href="#contacts" class="dots">...</a>
+        </div>
     </div>
-    <div class="card">
-      <div class="card-image" style="background-image: url('cabaret.jpg');"></div>
-      <div class="card-title">Cabaret</div>
-      <div class="card-info">
-        <div>🌹 5,5–6 см</div>
-        <div>⏱ 12–15 днів</div>
-        <div>🌿 50–70 см</div>
-        <div>🌸 35–40 пелюсток</div>
-      </div>
-      <a href="#contacts" class="card-more">...</a>
-    </div>
-    <div class="card">
-      <div class="card-image" style="background-image: url('paloma.jpg');"></div>
-      <div class="card-title">Paloma</div>
-      <div class="card-info">
-        <div>🌹 5–7 см</div>
-        <div>⏱ 12–15 днів</div>
-        <div>🌿 40–70 см</div>
-        <div>🌸 39 пелюсток</div>
-      </div>
-      <a href="#contacts" class="card-more">...</a>
-    </div>
-    <div class="card">
-      <div class="card-image" style="background-image: url('pandora.jpg');"></div>
-      <div class="card-title">Pandora</div>
-      <div class="card-info">
-        <div>🌹 5–6 см</div>
-        <div>⏱ 12 днів</div>
-        <div>🌿 40–90 см</div>
-        <div>🌸 50 пелюсток</div>
-      </div>
-      <a href="#contacts" class="card-more">...</a>
-    </div>
-  </div>
-
-  <div id="contacts" class="contacts">
-    <a href="https://t.me/+380674656284" class="btn tg">Telegram</a>
-    <a href="viber://chat?number=+380674656284" class="btn viber">Viber</a>
-    <a href="https://wa.me/380674656284" class="btn wa">WhatsApp</a>
-  </div>
+    <footer id="contacts">
+        <p>Зв’язатися з нами:</p>
+        <div class="buttons">
+            <a href="https://t.me/+380674656284" class="btn telegram">Telegram</a>
+            <a href="viber://chat?number=+380674656284" class="btn viber">Viber</a>
+            <a href="https://wa.me/380674656284" class="btn whatsapp">WhatsApp</a>
+        </div>
+    </footer>
 </body>
 </html>
