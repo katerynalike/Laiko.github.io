@@ -1,0 +1,48 @@
+
+body {
+    font-family: 'DM Serif Display', serif;
+    background: #f9f6f3;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 2em;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #4e2a4e;
+}
+.flower-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+.flower-item {
+    text-decoration: none;
+    color: #000;
+}
+.flower-item img {
+    width: 120px;
+    height: auto;
+    border-radius: 100%;
+}
+.flower-name {
+    font-size: 1.3em;
+    margin-top: 0.5em;
+}
+.contacts {
+    margin-top: 3em;
+}
+.btn {
+    display: inline-block;
+    margin: 0 0.5em;
+    padding: 0.8em 1.5em;
+    border-radius: 2em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.telegram { background: #0088cc; }
+.viber { background: #7360f2; }
+.whatsapp { background: #25d366; }
