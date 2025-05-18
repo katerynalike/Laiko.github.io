@@ -1,49 +1,71 @@
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  background-color: #fffaf7;
-  color: #333;
-  text-align: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fefaf7;
+    background-image: url('flower-silhouettes.png');
+    background-repeat: repeat;
+    background-size: contain;
+    color: #3e2b2e;
 }
-h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 28px;
-  margin: 30px 0;
+
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1em 0;
+    color: #472c35;
 }
+
 .catalog {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 0 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
 }
-.card {
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 20px;
-  transition: transform 0.3s ease;
+
+.flower-card {
+    width: 150px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1em;
 }
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
+
+.flower-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
+
+.name {
+    font-weight: bold;
+    margin: 0.5em 0 0;
+}
+
 .dots {
-  font-size: 24px;
-  margin-top: 10px;
-  color: #888;
+    color: #999;
+    font-size: 1.5em;
 }
-footer {
-  padding: 30px 0;
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em;
 }
-.contact-btn {
-  margin: 0 10px;
-  padding: 12px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+
+.btn {
+    padding: 0.7em 1.5em;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
 }
-.telegram { background: #229ED9; }
-.viber { background: #7360F2; }
-.whatsapp { background: #25D366; }
+
+.telegram { background-color: #229ED9; }
+.viber { background-color: #7360F2; }
+.whatsapp { background-color: #25D366; }
