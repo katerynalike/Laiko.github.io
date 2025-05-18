@@ -1,79 +1,62 @@
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: url('flower-silhouettes.PNG') repeat;
-  background-color: #fff8f4;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff7f2;
+    color: #2c2c2c;
 }
 
 .catalog-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: 36px;
-  margin: 20px 0;
-  color: #4c2c2c;
+    text-align: center;
+    font-size: 28px;
+    margin: 40px 0 20px;
+    font-weight: 600;
 }
 
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 16px;
+    gap: 20px;
 }
 
-.flower-card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 160px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: center;
+    width: 160px;
+    padding-bottom: 10px;
 }
 
-.flower-card img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.flower-card h3 {
-  margin: 8px 0 4px;
-  font-size: 18px;
-  color: #4c2c2c;
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 0;
+    display: block;
 }
 
 .dots {
-  font-size: 24px;
-  color: #4c2c2c;
-  text-decoration: none;
+    font-size: 22px;
+    color: #888;
+    margin: 10px 0;
+    cursor: pointer;
 }
 
-.contacts {
-  margin: 40px 0 20px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+.contact-section {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 16px;
 }
 
-.contact-button {
-  padding: 10px 18px;
-  border-radius: 30px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+.contact-section a {
+    color: #5c3d2e;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.telegram {
-  background: #229ED9;
-}
-
-.viber {
-  background: #7360F2;
-}
-
-.whatsapp {
-  background: #25D366;
+.contact-section a:hover {
+    text-decoration: underline;
 }
