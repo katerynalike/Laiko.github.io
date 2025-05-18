@@ -1,95 +1,30 @@
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'DM Serif Display', serif;
-    background-color: #fdf8f3;
-    color: #2d1e2f;
-}
-
 .catalog {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fef9f6;
+  font-family: 'DM Serif Display', serif;
 }
 
 h1 {
-    font-size: 48px;
-    margin-bottom: 60px;
-    color: #2d1e2f;
+  font-size: 2.5rem;
+  color: #4b2e39;
+  margin-bottom: 40px;
 }
 
-.flower-list {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
+.flower-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.flower-entry {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    max-width: 600px;
-    background: #fff;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
+.flower-icon {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s;
 }
 
-.flower-entry:hover {
-    transform: translateY(-5px);
-}
-
-.flower-entry img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #f3e6e0;
-}
-
-.flower-info {
-    text-align: left;
-}
-
-.flower-info h2 {
-    margin: 0 0 8px 0;
-    font-size: 24px;
-    color: #2d1e2f;
-}
-
-.flower-info p {
-    margin: 0;
-    font-size: 16px;
-    color: #5f4b5b;
-}
-
-.contact-buttons {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.contact-buttons a {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-size: 16px;
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.3s;
-}
-
-.contact-buttons .telegram { background-color: #229ED9; }
-.contact-buttons .viber { background-color: #665CAC; }
-.contact-buttons .whatsapp { background-color: #25D366; }
-
-.contact-buttons a:hover {
-    opacity: 0.9;
+.flower-icon:hover {
+  transform: scale(1.1);
 }
