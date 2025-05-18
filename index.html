@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -8,40 +7,58 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="catalog">
+  <h1 class="title">Каталог квітів</h1>
+  <div class="grid">
     <div class="card">
-      <img src="cool-water.jpg" alt="Cool Water">
-      <div class="info">
-        <p>5–6 см</p><p>10–12 днів</p><p>40–70 см</p><p>37 пелюсток</p>
+      <div class="card-image" style="background-image: url('cool-water.jpg');"></div>
+      <div class="card-title">Cool Water</div>
+      <div class="card-info">
+        <div>🌹 5–6 см</div>
+        <div>⏱ 10–12 днів</div>
+        <div>🌿 40–70 см</div>
+        <div>🌸 37 пелюсток</div>
       </div>
-      <a href="#contacts" class="more">...</a>
+      <a href="#contacts" class="card-more">...</a>
     </div>
     <div class="card">
-      <img src="cabaret.jpg" alt="Cabaret">
-      <div class="info">
-        <p>5,5–6 см</p><p>12–15 днів</p><p>50–70 см</p><p>35–40 пелюсток</p>
+      <div class="card-image" style="background-image: url('cabaret.jpg');"></div>
+      <div class="card-title">Cabaret</div>
+      <div class="card-info">
+        <div>🌹 5,5–6 см</div>
+        <div>⏱ 12–15 днів</div>
+        <div>🌿 50–70 см</div>
+        <div>🌸 35–40 пелюсток</div>
       </div>
-      <a href="#contacts" class="more">...</a>
+      <a href="#contacts" class="card-more">...</a>
     </div>
     <div class="card">
-      <img src="paloma.jpg" alt="Paloma">
-      <div class="info">
-        <p>5–7 см</p><p>12–15 днів</p><p>40–70 см</p><p>39 пелюсток</p>
+      <div class="card-image" style="background-image: url('paloma.jpg');"></div>
+      <div class="card-title">Paloma</div>
+      <div class="card-info">
+        <div>🌹 5–7 см</div>
+        <div>⏱ 12–15 днів</div>
+        <div>🌿 40–70 см</div>
+        <div>🌸 39 пелюсток</div>
       </div>
-      <a href="#contacts" class="more">...</a>
+      <a href="#contacts" class="card-more">...</a>
     </div>
     <div class="card">
-      <img src="pandora.jpg" alt="Pandora">
-      <div class="info">
-        <p>5–6 см</p><p>12 днів</p><p>40–90 см</p><p>50 пелюсток</p>
+      <div class="card-image" style="background-image: url('pandora.jpg');"></div>
+      <div class="card-title">Pandora</div>
+      <div class="card-info">
+        <div>🌹 5–6 см</div>
+        <div>⏱ 12 днів</div>
+        <div>🌿 40–90 см</div>
+        <div>🌸 50 пелюсток</div>
       </div>
-      <a href="#contacts" class="more">...</a>
+      <a href="#contacts" class="card-more">...</a>
     </div>
-  </main>
-  <footer id="contacts">
-    <a href="https://t.me/+380674656284">Telegram</a>
-    <a href="viber://chat?number=+380674656284">Viber</a>
-    <a href="https://wa.me/380674656284">WhatsApp</a>
-  </footer>
+  </div>
+
+  <div id="contacts" class="contacts">
+    <a href="https://t.me/+380674656284" class="btn tg">Telegram</a>
+    <a href="viber://chat?number=+380674656284" class="btn viber">Viber</a>
+    <a href="https://wa.me/380674656284" class="btn wa">WhatsApp</a>
+  </div>
 </body>
 </html>
