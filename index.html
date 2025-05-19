@@ -15,229 +15,137 @@
     h1 {
       text-align: center;
       font-family: 'DM Serif Display', serif;
-      font-size: 28px;
-      margin: 24px 0;
+      font-size: 26px;
+      margin: 20px 0;
       color: #333;
     }
     .catalog {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 10px 10px 40px;
+      padding: 10px;
+      gap: 20px;
     }
     .card {
       width: 160px;
-      margin: 10px;
       background: white;
-      border-radius: 20px;
-      overflow: hidden;
+      border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     .card img {
       width: 100%;
-      display: block;
     }
-    .details-button {
-      background-color: #ddd;
+    .plus-button, .quantity {
+      margin: 10px;
+      font-size: 20px;
+      background-color: #25d366;
+      color: white;
       border: none;
       border-radius: 50%;
-      padding: 8px 12px;
-      font-size: 20px;
-      margin: 12px;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      line-height: 36px;
       cursor: pointer;
     }
-    .contacts {
+    .hidden {
+      display: none;
+    }
+    .quantity-input {
+      width: 50px;
+      margin-bottom: 10px;
       text-align: center;
-      margin: 40px 0;
+    }
+    .checkout {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+    .checkout input {
+      padding: 8px;
       font-size: 14px;
+      margin: 10px;
     }
-    .contacts a {
-      margin: 0 8px;
-      color: #5e4033;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        width: 45%;
-      }
-    }
-    @media (max-width: 360px) {
-      .card {
-        width: 100%;
-      }
+    .checkout button {
+      background-color: #5e4033;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <h1>Каталог квітів</h1>
   <div class="catalog">
-    
-        <div class="card">
-            <img src="Cool Water.PNG" alt="Cool Water">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Cabaret.PNG" alt="Cabaret">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Paloma.PNG" alt="Paloma">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Pandora.PNG" alt="Pandora">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Red Panther.PNG" alt="Red Panther">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Tiffany.PNG" alt="Tiffany">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Nina.PNG" alt="Nina">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Orange Crush.PNG" alt="Orange Crush">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Novia.PNG" alt="Novia">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Nena.PNG" alt="Nena">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Mandala.PNG" alt="Mandala">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Jessika.PNG" alt="Jessika">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Frutetto.PNG" alt="Frutetto">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Marzipan.PNG" alt="Marzipan">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Queen Berry.PNG" alt="Queen Berry">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Pink Floyd.PNG" alt="Pink Floyd">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Hotspot.PNG" alt="Hotspot">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Gotcha.PNG" alt="Gotcha">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Full Monty.PNG" alt="Full Monty">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Mamma Mia.PNG" alt="Mamma Mia">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Redvolution.PNG" alt="Redvolution">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Fortune.PNG" alt="Fortune">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Explorer.PNG" alt="Explorer">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Mondial.PNG" alt="Mondial">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Proud.PNG" alt="Proud">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
-
-        <div class="card">
-            <img src="Playa Blanca.PNG" alt="Playa Blanca">
-            <a href="#"><button class="details-button">...</button></a>
-        </div>
-    
+    <div class="card" data-name="Red Panther">
+      <img src="Red Panther.PNG" alt="Red Panther">
+      <button class="plus-button" onclick="showQuantity(this)">+</button>
+      <input class="quantity-input hidden" type="number" min="1" placeholder="Кільк." onchange="setQuantity(this)">
+    </div>
+    <div class="card" data-name="Proud">
+      <img src="Proud.PNG" alt="Proud">
+      <button class="plus-button" onclick="showQuantity(this)">+</button>
+      <input class="quantity-input hidden" type="number" min="1" placeholder="Кільк." onchange="setQuantity(this)">
+    </div>
+    <div class="card" data-name="Playa Blanca">
+      <img src="Playa Blanca.PNG" alt="Playa Blanca">
+      <button class="plus-button" onclick="showQuantity(this)">+</button>
+      <input class="quantity-input hidden" type="number" min="1" placeholder="Кільк." onchange="setQuantity(this)">
+    </div>
   </div>
-  <div class="contacts">
-    <p>Зв’язатись з нами:</p>
-    <a href="https://t.me/+380674656284">Telegram</a> |
-    <a href="viber://chat?number=%2B380674656284">Viber</a> |
-    <a href="https://wa.me/380674656284">WhatsApp</a>
+
+  <div class="checkout">
+    <button onclick="startOrder()">Замовити</button>
+    <div id="nameField" class="hidden">
+      <input type="text" id="userName" placeholder="Ваше ім’я">
+      <button onclick="finishOrder()">Підтвердити</button>
+    </div>
   </div>
+
+  <script>
+    function showQuantity(btn) {
+      btn.classList.add('hidden');
+      btn.nextElementSibling.classList.remove('hidden');
+      btn.nextElementSibling.focus();
+    }
+
+    function setQuantity(input) {
+      const btn = input.previousElementSibling;
+      const value = input.value;
+      if (value && parseInt(value) > 0) {
+        btn.textContent = value;
+        btn.classList.remove('hidden');
+        input.classList.add('hidden');
+      }
+    }
+
+    function startOrder() {
+      document.getElementById('nameField').classList.remove('hidden');
+    }
+
+    function finishOrder() {
+      const name = document.getElementById('userName').value.trim();
+      if (!name) return alert('Введіть ім’я');
+
+      let message = 'Хочу замовити:%0A';
+      document.querySelectorAll('.card').forEach(card => {
+        const qty = card.querySelector('.plus-button').textContent;
+        const nameText = card.dataset.name;
+        if (!isNaN(qty)) {
+          message += `• ${nameText} — ${qty} шт.%0A`;
+        }
+      });
+      message += `Ім’я: ${name}`;
+
+      const link = 'https://wa.me/380674656284?text=' + message;
+      window.open(link, '_blank');
+    }
+  </script>
 </body>
 </html>
