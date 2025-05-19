@@ -24,8 +24,9 @@
             padding: 20px;
         }
         .card {
-            width: 300px;
-            margin: 15px;
+            width: 45%;
+            max-width: 300px;
+            margin: 10px;
             background: white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             border-radius: 8px;
@@ -62,6 +63,12 @@
         .telegram { background-color: #0088cc; }
         .viber { background-color: #665cac; }
         .whatsapp { background-color: #25d366; }
+
+        @media (max-width: 500px) {
+            .card {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
