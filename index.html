@@ -2,79 +2,81 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог квітів</title>
-    <style>
-        body {
-            background-color: #f8f5f2;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            text-align: center;
-            font-family: 'DM Serif Display', serif;
-            margin-top: 30px;
-        }
-        .catalog {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .card {
-            width: 45%;
-            max-width: 300px;
-            margin: 10px;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .card img {
-            width: 100%;
-            display: block;
-        }
-        .details-button {
-            background-color: #ccc;
-            border: none;
-            border-radius: 50%;
-            padding: 10px 14px;
-            font-size: 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        .contacts {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .contacts a {
-            margin: 0 10px;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            color: white;
-            font-weight: bold;
-        }
-        .telegram { background-color: #0088cc; }
-        .viber { background-color: #665cac; }
-        .whatsapp { background-color: #25d366; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог квітів</title>
+  <style>
+    body {
+      background-color: #fdf6f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      margin: 24px 0;
+      color: #333;
+    }
+    .catalog {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 10px 40px;
+    }
+    .card {
+      width: 160px;
+      margin: 10px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .details-button {
+      background-color: #ddd;
+      border: none;
+      border-radius: 50%;
+      padding: 8px 12px;
+      font-size: 20px;
+      margin: 12px;
+      cursor: pointer;
+    }
+    .contacts {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 14px;
+    }
+    .contacts a {
+      margin: 0 8px;
+      color: #5e4033;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        @media (max-width: 500px) {
-            .card {
-                width: 100%;
-            }
-        }
-    </style>
+    @media (max-width: 480px) {
+      .card {
+        width: 45%;
+      }
+    }
+    @media (max-width: 360px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Каталог квітів</h1>
-    <div class="catalog">
-        
+  <h1>Каталог квітів</h1>
+  <div class="catalog">
+    
         <div class="card">
             <img src="Cool Water.PNG" alt="Cool Water">
             <a href="#"><button class="details-button">...</button></a>
@@ -230,11 +232,12 @@
             <a href="#"><button class="details-button">...</button></a>
         </div>
     
-    </div>
-    <div class="contacts">
-        <a href="https://t.me/+380674656284" class="telegram">Telegram</a>
-        <a href="viber://chat?number=%2B380674656284" class="viber">Viber</a>
-        <a href="https://wa.me/380674656284" class="whatsapp">WhatsApp</a>
-    </div>
+  </div>
+  <div class="contacts">
+    <p>Зв’язатись з нами:</p>
+    <a href="https://t.me/+380674656284">Telegram</a> |
+    <a href="viber://chat?number=%2B380674656284">Viber</a> |
+    <a href="https://wa.me/380674656284">WhatsApp</a>
+  </div>
 </body>
 </html>
