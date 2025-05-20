@@ -233,85 +233,43 @@
 </div>
 <script>
     function toggleInput(btn) {
-  const input = btn.nextElementSibling;
-  input.style.display = input.style.display === "block" ? "none" : "block";
-}
-
-const order = {};
-let inputShown = false;
-
-function setQuantity(input) {
-  const card = input.closest('.card');
-  const name = card.getAttribute('data-name');
-  const qty = parseInt(input.value);
-  if (qty > 0) {
-    order[name] = qty;
-  } else {
-    delete order[name];
-  }
-}
-
-function showNameInput() {
-  const inputSection = document.getElementById("nameInputSection");
-  const input = document.getElementById("customerName");
-
-  if (!inputShown) {
-    inputSection.style.display = "block";
-    inputShown = true;
-  } else {
-    const name = input.value.trim();
-    if (!name) {
-      alert("Введіть ім’я");
-      return;
+      const input = btn.nextElementSibling;
+      input.style.display = input.style.display === "block" ? "none" : "block";
     }
 
-    let message = "Хочу замовити:%0A";
-    for (const [flower, qty] of Object.entries(order)) {
-      message += `• ${flower} — ${qty} шт.%0A`;
-    }
-    message += `%0AІм’я: ${name}`;
+    const order = {};
+    let inputShown = false;
 
-    const text = encodeURIComponent(message);
-    const link = `viber://chat?number=+380674656284&text=${text}`;
-    window.location.href = link;
-  }
-}
-
-function showNameInput( {
-  const inputSection = document.getElementById("nameInputSection");
-  const input = document.getElementById("customerName");
-
-  if (!inputShown) {
-    inputSection.style.display = "block";
-    inputShown = true;
-  } else {
-    const name = input.value.trim();
-    if (!name) {
-      alert("Введіть ім’я");
-      return;
+    function setQuantity(input) {
+      const card = input.closest('.card');
+      const name = card.getAttribute('data-name');
+      const qty = parseInt(input.value);
+      if (qty > 0) {
+        order[name] = qty;
+      } else {
+        delete order[name];
+      }
     }
 
-    let message = "Хочу замовити:%0A";
-    for (const [flower, qty] of Object.entries(order)) {
-      message += `• ${flower} — ${qty} шт.%0A`;
-    }
-    message += `%0AІм’я: ${name}`;
+    function showNameInput() {
+      const inputSection = document.getElementById("nameInputSection");
+      const input = document.getElementById("customerName");
 
-    const text = encodeURIComponent(message);
-    const link = `viber://chat?number=+380674656284&text=${text}`;
-    window.location.href = link;
-  }
-} else {
+      if (!inputShown) {
+        inputSection.style.display = "block";
+        inputShown = true;
+      } else {
         const name = input.value.trim();
         if (!name) {
           alert("Введіть ім’я");
           return;
         }
 
-        let message = `Замовлення від ${name}:%0A`;
+        let message = `Хочу замовити:%0A`;
         for (const [flower, qty] of Object.entries(order)) {
           message += `• ${flower}: ${qty} шт%0A`;
         }
+        message += `%0AІм'я: ${name}`;
 
         const text = encodeURIComponent(message);
         const link = `viber://chat?number=+380674656284&text=${text}`;
