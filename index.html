@@ -252,33 +252,38 @@
     }
 
     function showNameInput() {
-      const inputSection = document.getElementById("nameInputSection");
-      const input = document.getElementById("customerName");
+  const inputSection = document.getElementById("nameInputSection");
+  const input = document.getElementById("customerName");
 
-      if (!inputShown) {
-        inputSection.style.display = "block";
-        inputShown = true;
-      } else {
-        const name = input.value.trim();
-        if (!name) {
-          alert("Введіть ім’я");
-          return;
-        }
+  if (!inputShown) {
+    inputSection.style.display = "block";
+    inputShown = true;
+  } else {
+    const name = input.value.trim();
+    if (!name) {
+      alert("Введіть ім’я");
+      return;
+    }
 
-        let message = 'Хочу замовити:%0A';
-      document.querySelectorAll('.card').forEach(card => {
-        const qty = card.querySelector('.plus-button').textContent;
-        const nameText = card.dataset.name;
-        if (!isNaN(qty)) {
-          message += `• ${nameText} — ${qty} шт.%0A`;
-        }
-      });
-      message += `Ім’я: ${name}`;
-      const link = 'https://wa.me/380674656284?text=' + message;
-      window.open(link, '_blank');
+    let message = 'Хочу замовити:
+';
+    document.querySelectorAll('.card').forEach(card => {
+      const qtyInput = card.querySelector('.quantity-input');
+      const qty = parseInt(qtyInput.value);
+      const nameText = card.dataset.name;
+      if (qty > 0) {
+        message += `• ${nameText} — ${qty} шт.
+`;
       }
+    });
+    message += `
+Ім’я: ${name}`;
+
+    const link = 'https://wa.me/380674656284?text=' + encodeURIComponent(message);
+    window.open(link, '_blank');
+  }
+}
     }
         </script>
-
 </body>
 </html>
