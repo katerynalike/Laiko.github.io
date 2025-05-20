@@ -21,7 +21,7 @@
     .catalog {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-evenly;
       padding: 10px 10px 40px;
       max-width: 360px;
       margin: 0 auto;
@@ -221,6 +221,9 @@
 <button class="order-btn" onclick="showNameInput()">Замовити</button>
 <div id="nameInputSection" style="display:none; margin-top: 10px;">
 <input id="customerName" oninput="generateMessage()" placeholder="Ваше ім’я" type="text"/>
+<div class="links">
+<a id="viberLink" target="_blank">Viber</a>
+</div>
 </div>
 </div>
 <div class="contact">
@@ -238,7 +241,6 @@
     }
 
     const order = {};
-    let inputShown = false;
 
     function setQuantity(input) {
       const card = input.closest('.card');
@@ -252,29 +254,20 @@
     }
 
     function showNameInput() {
-      const inputSection = document.getElementById("nameInputSection");
-      const input = document.getElementById("customerName");
-
-      if (!inputShown) {
-        inputSection.style.display = "block";
-        inputShown = true;
-      } else {
-        const name = input.value.trim();
-        if (!name) {
-          alert("Введіть ім’я");
-          return;
-        }
-
-        let message = `Замовлення від ${name}:%0A`;
-        for (const [flower, qty] of Object.entries(order)) {
-          message += `• ${flower}: ${qty} шт%0A`;
-        }
-
-        const text = encodeURIComponent(message);
-        const link = `viber://chat?number=+380674656284&text=${text}`;
-        window.location.href = link;
-      }
+      document.getElementById("nameInputSection").style.display = "block";
     }
-        </script>
+
+    function generateMessage() {
+      const name = document.getElementById("customerName").value.trim();
+      if (!name) return;
+
+      let message = `Замовлення від ${name}:%0A`;
+      for (const [flower, qty] of Object.entries(order)) {
+        message += `• ${flower}: ${qty} шт%0A`;
+      }
+
+      document.getElementById("viberLink").href = `viber://forward?text=${message}`;
+    }
+  </script>
 </body>
 </html>
