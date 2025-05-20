@@ -266,15 +266,16 @@
     }
 
     
-    let message = "Хочу замовити:\n";
-    for (const [flower, qty] of Object.entries(order)) {
-      message += `• ${flower} — ${qty} шт.\n`;
-    }
-    message += `\nІм’я: ${name}`;
-    const text = encodeURIComponent(message);
-    
-    const link = `https://wa.me/380674656284?text=${text}`;
-    window.location.href = link;
+    let message = 'Хочу замовити:%0A';
+    document.querySelectorAll('.card').forEach(card => {
+      const qty = card.querySelector('.plus-button').textContent;
+      const nameText = card.dataset.name;
+      if (!isNaN(qty)) {
+        message += `• ${nameText} — ${qty} шт.%0A`;
+       }
+     });
+    const link = 'https://wa.me/380674656284?text=' + message;
+    window.open(link, '_blank');
   }
 }
     }
