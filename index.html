@@ -242,7 +242,13 @@
 
     function setQuantity(input) {
       const qty = input.value;
+      const card = input.closest('.card');
+      const name = card.dataset.name;
+
+
       if (qty && parseInt(qty) > 0) {
+        order[name] = qty;
+
         const btn = input.previousElementSibling;
         btn.textContent = qty;
         btn.style.display = "inline-block";
