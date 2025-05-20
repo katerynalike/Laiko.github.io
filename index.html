@@ -267,7 +267,7 @@
 
         let message = 'Хочу замовити:%0A';
       document.querySelectorAll('.card').forEach(card => {
-        const qty = card.querySelector('.plus-button').textContent;
+        const qty = card.querySelector('iput').textContent;
         const nameText = card.dataset.name;
         if (!isNaN(qty)) {
           message += `• ${nameText} — ${qty} шт.%0A`;
