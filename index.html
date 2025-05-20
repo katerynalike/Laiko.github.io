@@ -266,11 +266,11 @@
     }
 
     
-    let message = "Хочу замовити:%0A";
+    let message = "Хочу замовити:\n";
     for (const [flower, qty] of Object.entries(order)) {
-      message += `• ${flower} — ${qty} шт.%0A`;
+      message += `• ${flower} — ${qty} шт.\n`;
     }
-    message += `%0AІм’я: ${name}`;
+    message += `\nІм’я: ${name}`;
     const text = encodeURIComponent(message);
     
     const link = `https://wa.me/380674656284?text=${text}`;
