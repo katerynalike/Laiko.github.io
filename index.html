@@ -269,7 +269,7 @@
       document.querySelectorAll('.card').forEach(card => {
         const qty = card.querySelector('.plus-button').textContent;
         const nameText = card.dataset.name;
-        if (!isNaN(qty)) { && parseInt(qty) > 0) {
+        if (!isNaN(qty)) {
           message += `• ${nameText} — ${qty} шт.%0A`;
         }
       });
