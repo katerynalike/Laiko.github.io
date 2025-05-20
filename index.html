@@ -241,13 +241,12 @@
     let inputShown = false;
 
     function setQuantity(input) {
-      const card = input.closest('.card');
-      const name = card.getAttribute('data-name');
-      const qty = parseInt(input.value);
-      if (qty > 0) {
-        order[name] = qty;
-      } else {
-        delete order[name];
+      const qty = input.value;
+      if (qty && parseInt(qty) > 0) {
+        const btn = input.previousElementSibling;
+        btn.textContent = qty;
+        btn.style.display = "inline-block";
+        input.style.display = "none";
       }
     }
 
