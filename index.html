@@ -279,5 +279,30 @@
       }
     }
         </script>
+    let finalMessage = '';
+
+  function showMessengers() {
+    const name = document.getElementById("userName").value.trim();
+    if (!name) return alert("Введіть ім’я");
+
+    let message = 'Хочу замовити:%0A';
+    document.querySelectorAll('.card').forEach(card => {
+      const qty = card.querySelector('.plus-button').textContent;
+      const nameText = card.dataset.name;
+      if (!isNaN(qty)) {
+        message += `• ${nameText} — ${qty} шт.%0A`;
+      }
+    });
+    message += `Ім’я: ${name}`;
+    finalMessage = message;
+
+    document.getElementById("messengers").style.display = "block";
+  }
+
+  function sendOrder(method) {
+    let link = 'https://wa.me/380674656284?text=' + finalMessage;
+    }
+    window.open(link, '_blank');
+
 </body>
 </html>
