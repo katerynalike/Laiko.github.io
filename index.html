@@ -217,10 +217,11 @@
 <input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
 </div>
 </div>
-<div class="order-section">
-<button class="order-btn" onclick="showNameInput()">Замовити</button>
-<div id="nameInputSection" style="display:none; margin-top: 10px;">
-<input id="customerName" oninput="generateMessage()" placeholder="Ваше ім’я" type="text"/>
+ <div class="checkout">
+    <button onclick="startOrder()">Замовити</button>
+    <div id="nameField" class="hidden">
+      <input type="text" id="userName" placeholder="Ваше ім’я">
+      <button onclick="finishOrder()">Підтвердити</button>
 </div>
 </div>
 <div class="contact">
