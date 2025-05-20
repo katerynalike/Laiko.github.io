@@ -1,289 +1,155 @@
 
 <!DOCTYPE html>
-
 <html lang="uk">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Каталог квітів</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог квітів</title>
+  <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff7f4;
+      font-family: sans-serif;
+      background-color: #fff7f5;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       text-align: center;
     }
-    h1 {
-      font-size: 28px;
-      margin: 30px 0 10px;
-    }
+
     .catalog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 10px 10px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-    .card {
-  width: 160px;
-  margin: 10px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-    .card img {
-      width: 160px;
-      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
-    .plus-button {
+
+    .card {
+      width: 160px;
+      background-color: white;
+      border-radius: 15px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .plus-btn {
+      font-size: 24px;
+      color: #5c3a2f;
       border: none;
       background: none;
-      color: #5c2f1d;
-      font-size: 24px;
-      margin: 10px 0;
-    }
-    .quantity-input {
-      display: none;
-      width: 60px;
-      margin-bottom: 10px;
-    }
-    .order-section {
-      margin-bottom: 30px;
-    }
-    .order-btn {
-      background: #5c2f1d;
-      color: white;
-      border: none;
-      padding: 10px 24px;
-      font-size: 18px;
-      border-radius: 8px;
       cursor: pointer;
-      margin-top: 20px;
     }
-    .contact {
-      margin-top: 30px;
-      font-size: 16px;
-    }
-    .contact b {
-      color: #5c2f1d;
-    }
-    .links {
+
+    .quantity-input {
+      width: 50px;
       margin-top: 5px;
     }
-    .links a {
-      color: #5c2f1d;
-      text-decoration: none;
-      margin: 0 10px;
+
+    #orderSection {
+      margin-top: 20px;
+    }
+
+    #nameInputSection {
+      margin-top: 10px;
+      display: none;
+    }
+
+    #submitOrder {
+      margin-top: 10px;
+      background-color: #5c3a2f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-<h1>Каталог квітів</h1>
-<div class="catalog">
-<div class="card" data-name="Cool Water">
-<img alt="Cool Water" src="Cool Water.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Cabaret">
-<img alt="Cabaret" src="Cabaret.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Paloma">
-<img alt="Paloma" src="Paloma.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Pandora">
-<img alt="Pandora" src="Pandora.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Red Panther">
-<img alt="Red Panther" src="Red Panther.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Tiffany">
-<img alt="Tiffany" src="Tiffany.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Nina">
-<img alt="Nina" src="Nina.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Orange Crush">
-<img alt="Orange Crush" src="Orange Crush.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Novia">
-<img alt="Novia" src="Novia.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Nena">
-<img alt="Nena" src="Nena.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Mandala">
-<img alt="Mandala" src="Mandala.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Jessika">
-<img alt="Jessika" src="Jessika.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Frutetto">
-<img alt="Frutetto" src="Frutetto.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Marzipan">
-<img alt="Marzipan" src="Marzipan.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Queen Berry">
-<img alt="Queen Berry" src="Queen Berry.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Pink Floyd">
-<img alt="Pink Floyd" src="Pink Floyd.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Hotspot">
-<img alt="Hotspot" src="Hotspot.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Gotcha">
-<img alt="Gotcha" src="Gotcha.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Full Monty">
-<img alt="Full Monty" src="Full Monty.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Mamma Mia">
-<img alt="Mamma Mia" src="Mamma Mia.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Redvolution">
-<img alt="Redvolution" src="Redvolution.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Fortune">
-<img alt="Fortune" src="Fortune.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Explorer">
-<img alt="Explorer" src="Explorer.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Mondial">
-<img alt="Mondial" src="Mondial.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Proud">
-<img alt="Proud" src="Proud.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-<div class="card" data-name="Playa Blanca">
-<img alt="Playa Blanca" src="Playa Blanca.PNG"/>
-<button class="plus-button" onclick="toggleInput(this)">+</button>
-<input class="quantity-input" min="1" onchange="setQuantity(this)" type="number"/>
-</div>
-</div>
-<div class="order-section">
-<button class="order-btn" onclick="showNameInput()">Замовити</button>
-<div id="nameInputSection" style="display:none; margin-top: 10px;">
-<input id="customerName" oninput="generateMessage()" placeholder="Ваше ім’я" type="text"/>
-</div>
-</div>
-<div class="contact">
-<div><b>Зв’язатись з нами:</b></div>
-<div class="links">
-<a href="https://t.me/+380674656284">Telegram</a> |
-      <a href="viber://chat?number=+380674656284">Viber</a> |
-      <a href="https://wa.me/380674656284">WhatsApp</a>
-</div>
-</div>
-<script>
-    function toggleInput(btn) {
-      const input = btn.nextElementSibling;
-      input.style.display = input.style.display === "block" ? "none" : "block";
-    }
+  <h1>Каталог квітів</h1>
+  <div class="catalog" id="catalog"></div>
 
+  <div id="orderSection">
+    <div id="nameInputSection">
+      <input type="text" id="customerName" placeholder="Введіть ім’я"/>
+    </div>
+    <button id="submitOrder" onclick="showNameInput()">Замовити</button>
+  </div>
+
+  <script>
+    const flowers = ["Cool Water", "Red Panther", "Proud"];
     const order = {};
     let inputShown = false;
 
-    function setQuantity(input) {
-      const card = input.closest('.card');
-      const name = card.getAttribute('data-name');
-      const qty = parseInt(input.value);
-      if (qty > 0) {
-        order[name] = qty;
-      } else {
-        delete order[name];
-      }
+    function createCard(flowerName) {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const img = document.createElement("img");
+      img.src = flowerName + ".PNG";
+      img.alt = flowerName;
+
+      const name = document.createElement("h3");
+      name.textContent = flowerName;
+
+      const plus = document.createElement("button");
+      plus.className = "plus-btn";
+      plus.textContent = "+";
+      plus.onclick = () => {
+        const input = document.createElement("input");
+        input.type = "number";
+        input.className = "quantity-input";
+        input.min = "1";
+        input.value = "1";
+        input.onchange = () => {
+          order[flowerName] = input.value;
+        };
+        plus.replaceWith(input);
+        order[flowerName] = input.value;
+      };
+
+      card.appendChild(img);
+      card.appendChild(name);
+      card.appendChild(plus);
+
+      return card;
     }
+
+    const catalog = document.getElementById("catalog");
+    flowers.forEach(flower => {
+      catalog.appendChild(createCard(flower));
+    });
 
     function showNameInput() {
-  const inputSection = document.getElementById("nameInputSection");
-  const input = document.getElementById("customerName");
+      const inputSection = document.getElementById("nameInputSection");
+      const input = document.getElementById("customerName");
 
-  if (!inputShown) {
-    inputSection.style.display = "block";
-    inputShown = true;
-  } else {
-    const name = input.value.trim();
-    if (!name) {
-      alert("Введіть ім’я");
-      return;
-    }
+      if (!inputShown) {
+        inputSection.style.display = "block";
+        inputShown = true;
+      } else {
+        const name = input.value.trim();
+        if (!name) {
+          alert("Введіть ім’я");
+          return;
+        }
 
-    let message = 'Хочу замовити:
-';
-    document.querySelectorAll('.card').forEach(card => {
-      const qtyInput = card.querySelector('.quantity-input');
-      const qty = parseInt(qtyInput.value);
-      const nameText = card.dataset.name;
-      if (qty > 0) {
-        message += `• ${nameText} — ${qty} шт.
-`;
+        let message = "Хочу замовити:%0A";
+        for (const [flower, qty] of Object.entries(order)) {
+          message += `• ${flower} — ${qty} шт.%0A`;
+        }
+        message += `%0AІм’я: ${name}`;
+        const text = encodeURIComponent(message);
+        const link = `https://wa.me/380674656284?text=${text}`;
+        window.location.href = link;
       }
-    });
-    message += `
-Ім’я: ${name}`;
-
-    const link = 'https://wa.me/380674656284?text=' + encodeURIComponent(message);
-    window.open(link, '_blank');
-  }
-}
     }
-        </script>
+  </script>
 </body>
 </html>
