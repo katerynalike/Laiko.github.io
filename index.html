@@ -232,52 +232,44 @@
 </div>
 </div>
 <script>
-    function toggleInput(btn) {
-      const input = btn.nextElementSibling;
-      input.style.display = input.style.display === "block" ? "none" : "block";
+    function showQuantity(btn) {
+      btn.classList.add('hidden');
+      btn.nextElementSibling.classList.remove('hidden');
+      btn.nextElementSibling.focus();
     }
 
-    const order = {};
-    let inputShown = false;
-
     function setQuantity(input) {
-      const card = input.closest('.card');
-      const name = card.getAttribute('data-name');
-      const qty = parseInt(input.value);
-      if (qty > 0) {
-        order[name] = qty;
-      } else {
-        delete order[name];
+      const btn = input.previousElementSibling;
+      const value = input.value;
+      if (value && parseInt(value) > 0) {
+        btn.textContent = value;
+        btn.classList.remove('hidden');
+        input.classList.add('hidden');
       }
     }
 
-    function showNameInput() {
-      const inputSection = document.getElementById("nameInputSection");
-      const input = document.getElementById("customerName");
+    function startOrder() {
+      document.getElementById('nameField').classList.remove('hidden');
+    }
 
-      if (!inputShown) {
-        inputSection.style.display = "block";
-        inputShown = true;
-      } else {
-        const name = input.value.trim();
-        if (!name) {
-          alert("Введіть ім’я");
-          return;
-        }
+    function finishOrder() {
+      const name = document.getElementById('userName').value.trim();
+      if (!name) return alert('Введіть ім’я');
 
-        let message = 'Хочу замовити:%0A';
+      let message = 'Хочу замовити:%0A';
       document.querySelectorAll('.card').forEach(card => {
-        const qty = card.querySelector('input').value;
+        const qty = card.querySelector('.plus-button').textContent;
         const nameText = card.dataset.name;
-        if (qty > 0)) {
+        if (!isNaN(qty)) {
           message += `• ${nameText} — ${qty} шт.%0A`;
         }
       });
       message += `Ім’я: ${name}`;
+
       const link = 'https://wa.me/380674656284?text=' + message;
       window.open(link, '_blank');
-      }
     }
+
         </script>
 
 </body>
