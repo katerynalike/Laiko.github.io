@@ -241,18 +241,13 @@
     let inputShown = false;
 
     function setQuantity(input) {
-      const qty = input.value;
       const card = input.closest('.card');
-      const name = card.dataset.name;
-
-
-      if (qty && parseInt(qty) > 0) {
+      const name = card.getAttribute('data-name');
+      const qty = parseInt(input.value);
+      if (qty > 0) {
         order[name] = qty;
-
-        const btn = input.previousElementSibling;
-        btn.textContent = qty;
-        btn.style.display = "inline-block";
-        input.style.display = "none";
+      } else {
+        delete order[name];
       }
     }
 
@@ -272,9 +267,9 @@
 
         let message = 'Хочу замовити:%0A';
       document.querySelectorAll('.card').forEach(card => {
-        const qty = card.querySelector('quantity-input').value;
+        const qty = card.querySelector('.plus-button').textContent;
         const nameText = card.dataset.name;
-        if (!isNaN(qty)) && parseInt(qty) > 0) {
+        if (!isNaN(qty)) {
           message += `• ${nameText} — ${qty} шт.%0A`;
         }
       });
